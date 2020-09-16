@@ -1,0 +1,173 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	color: #333; 
+}
+a:link, a:active, a:visited{
+	color: #315e8a;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+/* GRID 960PX */
+.linha{
+	width: 960px; 
+	margin: 0 auto; 
+	overflow: auto; 
+	padding: 5px 0; 
+}
+.coluna{
+	padding: 0 10px; 
+	float: left; 
+}
+.col1{
+	width: 60px;
+}
+.col2{
+	width: 140px; 
+}
+.col3{
+	width: 220px; 
+}
+.col4{
+	width: 300px;
+}
+.col5{
+	width: 380px;
+}
+.col6{
+	width: 460px;
+}
+.col7{
+	width: 540px;
+}
+.col8{
+	width: 620px;
+}
+.col9{
+	width: 700px;
+}
+.col10{
+	width: 780px;
+}
+.col11{
+	width: 860px;
+}
+.col12{
+	width: 940px; 
+}
+/* ESTILOS REUTILIZÁVEIS */
+.sem-padding{
+	padding: 0 !important; /* força a utilização desse padding mesmo que tenha outro embaixo, fazendo com que este seja o mais importante */
+}
+.sem-margin{
+	margin: 0 !important;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight: 500; /* peso da fonte com base na fonte do Google Fonts definido incialmente */
+	margin: 15px 0 10px 0; /* margem em cima de 15px, na direita 0, embaixo 10px e na esquerda 0 */
+}
+ul li, ol li{
+	margin-bottom: 5px;
+}
+ul.inline li, ol.inline li{ /* todas as ul e ol que tiverem a classe inline será estilizado o li delas */
+	display: inline; /* para mostrar em linha */
+	margin-right: 15px; /* espaçamento entre os menus */
+}
+ul.inline li:last-child, ol.inline li:last-child{ /* server para não sobrar nada de margem a direita na ultima opção do menu, ou seja, o último li de uma ul ou ol que tiver uma classe inline não receberá margem na direita  */
+	margin-right: 0; 
+}
+ul.sem-marcador, ol.sem-marcador{
+	list-style: none; /* tira as bolinhas ou qualquer marcados da frente das opções */
+}
+a.botao, input.botao{
+	background: #1f3c58;
+	padding: 5px 10px; /* em cima e embaixo de 5px, direita e esqueda de 10px */
+	border-radius: 3px; /* arrendonda os cantos do botão */
+	color: #ebebeb;
+	cursor: pointer; /* cursor do mouse ficar com a mãozinha */
+	margin: 5px 0;
+	display: inline-block; /* mostrar em linha mas ser um bloco */
+	border: none; /* para não haver nenhuma borda nos botões */
+}
+a.botao:hover, input.botao:hover{ /*efeito de quando o mouse estiver sobre o botão */
+	background: #315e8a;
+	text-decoration: none; /* para não ficar sublinhado */
+}
+img{ /* faz com que as imagens se encaixem dentro do layout definido sem ficar barras de rolagem sobrando pelas páginas */
+	max-width: 100%; /* largura máxima respeitando o tamanho da div */
+	height: auto; /* altura automática */
+}
+/* LAYOUT DO SITE */
+.header{
+	background: #dee3e6;
+}
+h1.logo{
+	font-weight: 300; /* pra não ficar tão negrito */
+	color: #315e8a;
+	letter-spacing: -2px;
+}
+.conteudo-extra{
+	background: #f1f2ea;
+}
+.footer{ /* não é a tag footer e sim a classe footer por ter um ponto na frente */
+	background: #1f3c58;
+	color: #ebebeb;
+	padding: 20px 0; /* 20px em cima e embaixo e 0 direito e esquerda */
+	text-align: center; /* para o texto ficar centralizado */
+	font-weight: 100;
+}
+.menu{
+	text-transform: uppercase; /* todas as letras maiúsculas */
+	text-align: right; /* texto do lado direito */
+	margin-top: 20px;
+}
+.menu li a{
+	padding: 5px 10px;
+	border-radius: 3px;
+}
+.menu li a:hover{ /* efeito do mouse sobre um item de menu */
+	text-decoration: none; /* para não ter nenhum undeline quando passar por cima das opções do menu */
+	background: #1f3c58;
+	color: #ebebeb;
+}
+ul.noticias li{ /* estiliza as li que estiverem dentro da ul que tiver a classe noticias */
+	clear: both; /* limpa as flutuações */	 
+	display: block;
+	overflow: hidden; /* ocutar o conteúdo excedente */
+	margin-bottom: 20px;
+}
+ul.noticias li img{ /* pega a imagem que está dentro de uma li, que está dentro de uma ul com a classe noticias */
+	width: 70px;
+	height: auto;
+	margin-right: 10px;
+	float: left; /* para flutuar para o lado esquedo */
+}
+ul.noticias li h4{ /* título da notícia */
+	margin: -2px 0 5px 0; /* -2px em cima, 0 na direita, 5px embaixo e 0 a esquerda */
+	font-weight: 500;
+}
+ul.noticias li p{
+	margin: 5px 0; /* em cima e embaixo de 5px, direita e esquerda de 0 */
+	font-weight: 300;
+}
+ul.noticias li p a{
+	font-weight: 500;
+}
+.contato label{ /* as label que estiverem dentro da div com a classe contato */
+	display: block; /* cada um em uma linha, não fica um do lado do outro */
+	font-size: 13px;
+	font-weight: 300;
+}
+.contato input, .contato textarea{
+	display: block; /* cada um em uma linha, não fica um do lado do outro */
+	margin-bottom: 15px;
+	padding: 5px 2%; /* em cima e embaixo 5px e na direita e esquerda 2%, usa-se % neste caso para saber que ficará certinho o padding com o widht (largura) indeferente de que largura de coluna eu esteja utilizando */
+	width: 96%; /* largura dos elementos de 96% */
+}
+.contato textarea{
+	height: 150px;
+}
+.contato input.botao{ /* todo input que tiver a classe botao e estiver dentro de uma classe contato */
+	width: auto;
+}	
