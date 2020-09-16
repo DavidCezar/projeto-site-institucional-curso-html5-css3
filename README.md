@@ -33,8 +33,6 @@ HTML5 and CSS3 course for beginners promoted by the RBTech Company and taught by
 
 
 ## Authors
-Contributors names and contact info
-
 Ricardo Bernardi
 
 [Support](http://rbtech.info/contato/ "Support")
